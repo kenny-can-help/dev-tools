@@ -1,0 +1,17 @@
+<div class="container">
+  <textarea
+    rows="4"
+    nz-input
+    [ngModel]="plainTextSubject| async"
+    placeholder="明文"
+    (ngModelChange)="plainTextSubject.next($event)"
+  ></textarea>
+  <textarea
+    rows="4"
+    nz-input
+    [ngModel]="ciphertextSubject| async"
+    (ngModelChange)="ciphertextSubject.next($event)"
+
+    placeholder="密文"
+  ></textarea>
+</div>
